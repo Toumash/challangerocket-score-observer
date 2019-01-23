@@ -4,9 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChallangeRocket"
+xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <!--standard gauge-->
+        <lvc:Gauge Grid.Column="0" Margin="125,10,139,56"
+                   From="0" To="100" Value="0" x:Name="gauge">
+        </lvc:Gauge>
+        <TextBlock x:Name="tb_firstTeam" HorizontalAlignment="Left" Margin="19,350,0,0" TextWrapping="Wrap" Text="First Team" VerticalAlignment="Top" Height="40" Width="330" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock x:Name="tb_secondTeam" HorizontalAlignment="Left" Margin="431,350,0,0" TextWrapping="Wrap" Text="Second Team" VerticalAlignment="Top" Height="40" Width="330" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock x:Name="tb_firstTeam_Votes" HorizontalAlignment="Left" Margin="19,379,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="40" Width="330" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock x:Name="tb_secondTeam_Votes" HorizontalAlignment="Left" Margin="431,379,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="40" Width="330" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
+        <Rectangle HorizontalAlignment="Left" Height="69" Margin="310,247,0,0" VerticalAlignment="Top" Width="166" Fill="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+        <TextBlock x:Name="tb_difference" HorizontalAlignment="Left" Margin="226,258,0,0" TextWrapping="Wrap" Text="Second Team" VerticalAlignment="Top" Height="40" Width="330" FontSize="24" FontWeight="Bold" TextAlignment="Center" Foreground="Black"/>
+        <TextBlock x:Name="tb_lastUpdate" HorizontalAlignment="Left" Margin="41,24,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="31" Width="92"/>
     </Grid>
 </Window>
